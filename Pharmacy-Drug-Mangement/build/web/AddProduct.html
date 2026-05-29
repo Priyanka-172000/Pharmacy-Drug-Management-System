@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Product</title>
+<link rel="stylesheet" href="css/AddProduct.css">
+<style>
+.description-section {
+    margin-top: 10px;
+}
+.description-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="topbar1"></div>
+	<div class="topbar2">
+		<div class="container1">
+			<div class="logout-btn">
+				<a href="Logout.jsp">Logout</a>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="container2">
+			<div class="navbar">
+				<a href="SellerHomepage.jsp">HOME</a>
+				<a href="AddProduct.html">ADD</a>
+				<a href="AddInventory.jsp">RESTOCK</a>
+				<a href="SellerOrders.jsp">ORDERS</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="active">
+	<div class="filler"></div>
+
+	<!-- ✅ FIXED: Added accept-charset="UTF-8" -->
+	<form action="AddProduct.jsp" method="post" accept-charset="UTF-8">
+		<div class="container">
+			<h1>Add Product</h1>
+			<hr>
+
+			<label for="productid"><b>Product ID</b></label>
+			<input type="text" placeholder="Enter Product ID" name="productid" required>
+
+			<label for="productname"><b>Product Name</b></label>
+			<input type="text" placeholder="Enter Product Name" name="productname" required>
+
+			<label for="manufacturer"><b>Manufacturer</b></label>
+			<input type="text" placeholder="Enter Manufacturer" name="manufacturer" required>
+
+			<label for="mfg"><b>Mfg Date</b></label>
+			<input type="date" name="mfg" required>
+
+			<label for="exp"><b>Exp Date</b></label>
+			<input type="date" name="exp" required>
+
+			<label for="price"><b>Price (in Rupees)</b></label>
+			<input type="text" placeholder="Enter Price" name="price"
+			       onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+
+			<label for="quantity"><b>Quantity</b></label>
+			<input type="text" placeholder="Enter Quantity" name="quantity"
+			       onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+
+			<div class="description-section">
+				<label class="description-label" for="desc_english">
+					Description (English)
+				</label>
+				<textarea id="desc_english" name="desc_english" rows="4"
+					placeholder="Enter product description in English"></textarea>
+
+				<label class="description-label" for="desc_kannada">
+					ವಿವರಣೆ (ಕನ್ನಡ) - Description (Kannada)
+				</label>
+				<textarea id="desc_kannada" name="desc_kannada" rows="4"
+					placeholder="ಕನ್ನಡದಲ್ಲಿ ಉತ್ಪನ್ನದ ವಿವರಣೆಯನ್ನು ನಮೂದಿಸಿ"></textarea>
+
+				<label class="description-label" for="desc_hindi">
+					विवरण (हिंदी) - Description (Hindi)
+				</label>
+				<textarea id="desc_hindi" name="desc_hindi" rows="4"
+					placeholder="हिंदी में उत्पाद का विवरण दर्ज करें"></textarea>
+			</div>
+
+			<hr>
+			<button type="submit" class="registerbtn">Add Product</button>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

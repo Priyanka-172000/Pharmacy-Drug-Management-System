@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Dark overlay for readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 30, 60, 0.55);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.indexbox {
+    width: 360px;
+    height: auto;
+    padding: 40px 35px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+/* Pharmacy cross icon */
+.indexbox::before {
+    content: '💊';
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 0 auto;
+    padding: 0 0 30px;
+    color: #0a5c6b;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.indexbox button {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.button1 {
+    position: relative;
+    border: none;
+    outline: none;
+    height: 44px;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0ca1a6, #0a7a7e);
+    cursor: pointer;
+    border-radius: 22px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.button1:hover {
+    background: linear-gradient(135deg, #0a7a7e, #085f63);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(12, 161, 166, 0.4);
+}
